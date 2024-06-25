@@ -415,6 +415,9 @@ class Poll(Market):
 class BountiedMarket(Market):
     pass
 
+@define
+class NumberMarket(Market):
+    pass
 
 @define
 class ContractMetric:
@@ -448,6 +451,7 @@ MARKET_TYPES_MAP: Mapping[str, Type[Market]] = {
     "BINARY": BinaryMarket,
     "FREE_RESPONSE": FreeResponseMarket,
     "NUMERIC": NumericMarket,
+    "NUMBER": NumberMarket,
     "PSEUDO_NUMERIC": PseudoNumericMarket,
     "MULTIPLE_CHOICE": MultipleChoiceMarket,
     "QUADRATIC_FUNDING": QuadraticFundingMarket,
